@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#100b18">
+    <title>Diwali Dash | The Festive Gauntlet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="site-header">
+        <div class="brand">NIPUNI <span>×</span> AHCT</div>
+        <div class="header-tag">A FESTIVE CHALLENGE</div>
+    </header>
+
+    <main class="main-container">
+
+        <!-- WELCOME SCREEN -->
+        <section id="welcome-screen" class="screen welcome-screen">
+            <div class="diya-decoration">🪔</div>
+
+            <p class="eyebrow">LIGHT UP YOUR MIND</p>
+            <h1>DIWALI <span>DASH</span></h1>
+            <h2 class="subtitle">THE FESTIVE GAUNTLET</h2>
+
+            <p class="welcome-description">
+                Five mini-games. One challenge. Endless festive energy!
+            </p>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <span>🎮</span>
+                    <strong>5</strong>
+                    <small>Mini-Games</small>
+                </div>
+                <div class="feature-card">
+                    <span>🏆</span>
+                    <strong>BEST</strong>
+                    <small>Score Wins</small>
+                </div>
+                <div class="feature-card">
+                    <span>✨</span>
+                    <strong>3</strong>
+                    <small>Maximum Attempts</small>
+                </div>
+            </div>
+
+            <div class="name-entry">
+                <label for="player-name">ENTER YOUR PLAYER NAME</label>
+                <input type="text" id="player-name" placeholder="Your name..." minlength="2" maxlength="16"
+                    autocomplete="off">
+                <button id="start-btn" class="primary-btn">START THE CHALLENGE →</button>
+            </div>
+
+            <button id="leaderboard-btn" class="text-btn">
+                🏆 View Leaderboard
+            </button>
+        </section>
+
+        <!-- GAME SCREEN -->
+        <section id="game-screen" class="screen game-screen" style="display:none;">
+
+            <div class="game-topbar">
+                <div>
+                    <p id="round-name" class="eyebrow">GAME 1 OF 5</p>
+                    <h2 id="game-title">THE VIGIL</h2>
+                </div>
+
+                <div class="timer-card">
+                    <span>TIME LEFT</span>
+                    <strong id="timer">75s</strong>
+                </div>
+            </div>
+
+            <div class="progress-track">
+                <div id="progress-bar" class="progress-fill"></div>
+            </div>
+
+            <div class="score-card">
+                <span>YOUR SCORE</span>
+                <strong id="current-score">0</strong>
+            </div>
+
+            <p id="game-instruction" class="game-instruction"></p>
+
+            <div id="game-area" class="game-area"></div>
+
+        </section>
+
+        <!-- RESULT SCREEN -->
+        <section id="result-screen" class="screen result-screen" style="display:none;">
+            <div class="result-icon">🏆</div>
+            <p class="eyebrow">CHALLENGE COMPLETED</p>
+            <h1>YOU DID IT!</h1>
+            <p class="result-description">Your festive challenge is complete.</p>
+
+            <div class="final-score-card">
+                <span>YOUR FINAL SCORE</span>
+                <strong id="final-score">0</strong>
+            </div>
+
+            <p id="attempt-result" class="attempt-result"></p>
+
+            <div class="result-actions">
+                <button id="retry-btn" class="primary-btn">PLAY AGAIN ↻</button>
+                <button id="certificate-btn" class="secondary-btn">VIEW CERTIFICATE</button>
+                <button id="leaderboard-btn-result" class="secondary-btn">
+                    VIEW LEADERBOARD
+                </button>
+            </div>
+        </section>
+
+        <!-- LEADERBOARD SCREEN -->
+        <section id="leaderboard-screen" class="screen leaderboard-screen" style="display:none;">
+            <p class="eyebrow">THE FESTIVE CHAMPIONS</p>
+            <h1>LEADERBOARD</h1>
+            <p class="section-description">The brightest minds shine here.</p>
+
+            <div id="leaderboard-list" class="leaderboard-list">
+                Loading leaderboard...
+            </div>
+
+            <button id="refresh-btn" class="secondary-btn">↻ REFRESH</button>
+            <button class="text-btn" onclick="location.reload()">BACK TO HOME</button>
+        </section>
+
+        <!-- CERTIFICATE SCREEN -->
+        <section id="certificate-screen" class="screen certificate-screen" style="display:none;">
+
+            <div id="certificate" class="certificate">
+
+                <div class="certificate-logos">
+                    <img src="assets/nipuni-logo.png" alt="NIPUNI Logo">
+                    <img src="assets/ahct-logo.png" alt="AVTAR Human Capital Trust Logo">
+                </div>
+
+                <p class="certificate-organizer">NIPUNI × AVTAR HUMAN CAPITAL TRUST</p>
+
+                <div class="certificate-diya">🪔</div>
+
+                <h1>Certificate of Participation</h1>
+
+                <p>This certificate is proudly presented to</p>
+
+                <h2 id="certificate-name"></h2>
+
+                <p>For participating in</p>
+
+                <h3>DIWALI DASH: THE FESTIVE GAUNTLET</h3>
+
+                <p id="certificate-score"></p>
+
+                <p class="certificate-message">Keep playing. Keep shining!</p>
+
+            </div>
+
+            <button id="download-certificate" class="primary-btn">
+                DOWNLOAD CERTIFICATE
+            </button>
+
+            <button class="text-btn" onclick="location.reload()">BACK TO HOME</button>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        Made with ❤️ by Nafiya
+    </footer>
+
+    <script type="module" src="game.js"></script>
+
+</body>
+
+</html>
